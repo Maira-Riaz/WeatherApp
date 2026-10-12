@@ -1,0 +1,89 @@
+[33m3e09830[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m Initial commit - WeatherApp
+ .gitignore                                         |  16 [32m++[m
+ .idea/.gitignore                                   |   3 [32m+[m
+ .idea/.name                                        |   1 [32m+[m
+ .idea/AndroidProjectSystem.xml                     |   6 [32m+[m
+ .idea/compiler.xml                                 |   6 [32m+[m
+ .idea/deploymentTargetSelector.xml                 |  11 [32m+[m
+ .idea/deviceManager.xml                            |  13 [32m++[m
+ .idea/gradle.xml                                   |  18 [32m++[m
+ .idea/inspectionProfiles/Project_Default.xml       |  61 [32m+++++[m
+ .idea/misc.xml                                     |  10 [32m+[m
+ .idea/runConfigurations.xml                        |  17 [32m++[m
+ .idea/vcs.xml                                      |   6 [32m+[m
+ app/.gitignore                                     |   1 [32m+[m
+ app/build.gradle.kts                               |  60 [32m+++++[m
+ .../example/weatherapp/ExampleInstrumentedTest.kt  |  24 [32m++[m
+ app/src/main/AndroidManifest.xml                   |  31 [32m+++[m
+ app/src/main/ic_launcher-playstore.png             | Bin [31m0[m -> [32m90339[m bytes
+ .../java/com/example/weatherapp/MainActivity.kt    |  23 [32m++[m
+ .../com/example/weatherapp/dto/CurrentWeather.kt   |  16 [32m++[m
+ .../weatherapp/dto/CurrentWeatherResponse.kt       |  28 [32m+++[m
+ .../com/example/weatherapp/dto/DailyWeather.kt     |  10 [32m+[m
+ .../example/weatherapp/dto/DailyWeatherResponse.kt |  23 [32m++[m
+ .../com/example/weatherapp/dto/HourlyWeather.kt    |   9 [32m+[m
+ .../weatherapp/dto/HourlyWeatherResponse.kt        |  17 [32m++[m
+ .../com/example/weatherapp/dto/WeatherCondition.kt |   8 [32m+[m
+ .../com/example/weatherapp/dto/WeatherResponse.kt  |  10 [32m+[m
+ .../example/weatherapp/helper/DateTimeFormatter.kt |  40 [32m++++[m
+ .../example/weatherapp/helper/LocationHelper.kt    |  65 [32m++++++[m
+ .../com/example/weatherapp/helper/WeatherUtils.kt  |  13 [32m++[m
+ .../com/example/weatherapp/mapper/WeatherMapper.kt |  50 [32m++++[m
+ .../weatherapp/network/WeatherApiService.kt        |  40 [32m++++[m
+ .../weatherapp/repository/WeatherRepository.kt     |  20 [32m++[m
+ .../java/com/example/weatherapp/ui/theme/Color.kt  |  15 [32m++[m
+ .../java/com/example/weatherapp/ui/theme/Dimens.kt |  38 [32m++++[m
+ .../java/com/example/weatherapp/ui/theme/Theme.kt  |  29 [32m+++[m
+ .../java/com/example/weatherapp/ui/theme/Type.kt   |  46 [32m++++[m
+ .../weatherapp/views/components/DailyForecast.kt   | 143 [32m++++++++++++[m
+ .../weatherapp/views/components/HourlyForecast.kt  | 122 [32m++++++++++[m
+ .../weatherapp/views/components/WeatherHeader.kt   | 121 [32m++++++++++[m
+ .../weatherapp/views/components/WeatherImage.kt    |  30 [32m+++[m
+ .../weatherapp/views/components/WeatherInfo.kt     | 151 [32m+++++++++++++[m
+ .../weatherapp/views/screens/LoadingScreen.kt      |  87 [32m+++++++[m
+ .../views/screens/LocationPermissionScreen.kt      |  91 [32m++++++++[m
+ .../weatherapp/views/screens/WeatherErrorScreen.kt |  89 [32m++++++++[m
+ .../weatherapp/views/screens/WeatherScreen.kt      | 213 [32m+++++++++++++++++[m
+ .../weatherapp/views/viewmodels/WeatherVM.kt       | 127 [32m+++++++++++[m
+ app/src/main/keepRules/rules.keep                  |  12 [32m+[m
+ .../main/res/drawable/ic_launcher_background.xml   | 170 [32m++++++++++++++[m
+ .../main/res/drawable/ic_launcher_foreground.xml   |  30 [32m+++[m
+ app/src/main/res/drawable/sunny_cloud.png          | Bin [31m0[m -> [32m322781[m bytes
+ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml |   6 [32m+[m
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |   6 [32m+[m
+ app/src/main/res/mipmap-hdpi/ic_launcher.webp      | Bin [31m0[m -> [32m2142[m bytes
+ .../res/mipmap-hdpi/ic_launcher_background.webp    | Bin [31m0[m -> [32m44[m bytes
+ .../res/mipmap-hdpi/ic_launcher_foreground.webp    | Bin [31m0[m -> [32m3996[m bytes
+ .../main/res/mipmap-hdpi/ic_launcher_round.webp    | Bin [31m0[m -> [32m4508[m bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher.webp      | Bin [31m0[m -> [32m1492[m bytes
+ .../res/mipmap-mdpi/ic_launcher_background.webp    | Bin [31m0[m -> [32m44[m bytes
+ .../res/mipmap-mdpi/ic_launcher_foreground.webp    | Bin [31m0[m -> [32m2334[m bytes
+ .../main/res/mipmap-mdpi/ic_launcher_round.webp    | Bin [31m0[m -> [32m2764[m bytes
+ app/src/main/res/mipmap-xhdpi/ic_launcher.webp     | Bin [31m0[m -> [32m3028[m bytes
+ .../res/mipmap-xhdpi/ic_launcher_background.webp   | Bin [31m0[m -> [32m46[m bytes
+ .../res/mipmap-xhdpi/ic_launcher_foreground.webp   | Bin [31m0[m -> [32m5762[m bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.webp   | Bin [31m0[m -> [32m6338[m bytes
+ app/src/main/res/mipmap-xxhdpi/ic_launcher.webp    | Bin [31m0[m -> [32m4824[m bytes
+ .../res/mipmap-xxhdpi/ic_launcher_background.webp  | Bin [31m0[m -> [32m52[m bytes
+ .../res/mipmap-xxhdpi/ic_launcher_foreground.webp  | Bin [31m0[m -> [32m10560[m bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.webp  | Bin [31m0[m -> [32m10266[m bytes
+ app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp   | Bin [31m0[m -> [32m7064[m bytes
+ .../res/mipmap-xxxhdpi/ic_launcher_background.webp | Bin [31m0[m -> [32m52[m bytes
+ .../res/mipmap-xxxhdpi/ic_launcher_foreground.webp | Bin [31m0[m -> [32m17102[m bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.webp | Bin [31m0[m -> [32m14012[m bytes
+ app/src/main/res/values/colors.xml                 |  10 [32m+[m
+ app/src/main/res/values/strings.xml                |   3 [32m+[m
+ app/src/main/res/values/themes.xml                 |   5 [32m+[m
+ app/src/main/res/xml/backup_rules.xml              |  13 [32m++[m
+ app/src/main/res/xml/data_extraction_rules.xml     |  19 [32m++[m
+ .../java/com/example/weatherapp/ExampleUnitTest.kt |  17 [32m++[m
+ build.gradle.kts                                   |   5 [32m+[m
+ gradle.properties                                  |  19 [32m++[m
+ gradle/gradle-daemon-jvm.properties                |  12 [32m+[m
+ gradle/libs.versions.toml                          |  30 [32m+++[m
+ gradle/wrapper/gradle-wrapper.jar                  | Bin [31m0[m -> [32m45457[m bytes
+ gradle/wrapper/gradle-wrapper.properties           |   9 [32m+[m
+ gradlew                                            | 251 [32m+++++++++++++++++++++[m
+ gradlew.bat                                        |  94 [32m++++++++[m
+ settings.gradle.kts                                |  27 [32m+++[m
+ 87 files changed, 2696 insertions(+)
